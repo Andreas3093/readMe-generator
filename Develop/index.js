@@ -8,39 +8,49 @@ const questions = [
     {
         type: "input",
         name: "title",
-        message: "Enter Project Title"
+        message: "Enter Project Title:"
     },
     {
         type: "input",
         name: "description",
-        message: "Enter Project Description"
+        message: "Enter Project Description:"
     },
     {
         type: "input",
         name: "installation",
-        message: "Enter Installation Instruction"
+        message: "Enter Installation Instruction:"
     },
     {
         type: "list",
         name: "license",
-        message: "Choose License",
+        message: "Choose License:",
         choices: license
     },
     {
         type: "input",
         name: "usage",
-        message: "Enter Usage Information"
+        message: "Enter Usage Information:"
     },
     {
         type: "input",
         name: "guideline",
-        message: "Enter contribution Guidelines"
+        message: "Enter contribution Guidelines:"
     },
     {
         type: "input",
         name: "test",
-        message: "Enter Test Instructions"
+        message: "Enter Test Instructions:"
     },
+    {
+        type: "input",
+        name: "github",
+        message: "Enter your GitHub Username"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Enter Email Address"
+    }
 ];
 const promptUser = () => {
     return inquirer.prompt(questions);
