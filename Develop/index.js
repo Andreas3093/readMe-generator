@@ -44,12 +44,12 @@ const questions = [
     {
         type: "input",
         name: "github",
-        message: "Enter your GitHub Username"
+        message: "Enter your GitHub Username:"
     },
     {
         type: "input",
         name: "email",
-        message: "Enter Email Address"
+        message: "Enter Email Address:"
     }
 ];
 const promptUser = () => {
