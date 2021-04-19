@@ -37,7 +37,9 @@ const questions = [
         message: "Enter Test Instructions"
     },
 ];
-
+const promptUser = () => {
+    return inquirer.prompt(questions);
+}
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
