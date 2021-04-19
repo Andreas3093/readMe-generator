@@ -38,12 +38,48 @@ function renderLicenseSection(license) {
   }else {
     return "";
   }
-
+}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `
+  # Title
+  ${data.title}
+  
+  [![License](${renderLicenseBadge(data.license)})](${renderLicenseLink(data.license)})
+  
+  ## Table of contents 
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage Information](#usage-information)
+  - [License](#license)
+  - [Contribution Guidelines](#contribution-guidelines)
+  - [Test Procedure](#test-procedure)
+  - [Questions](#questions)
+  
+  ## Description
+     ${data.description}
 
-`;
+  ## Installation
+     ${(data.installation == "")?"N/A":data.installation}
+
+  ## Usage Information
+     ${(data.usage == "")?"N/A":data.usage}
+
+  ## License
+     ${(renderLicenseSection(data.license) == "")?"N/A":renderLicenseSection(data.license)}
+  
+  ## Contribution Guidelines
+     ${(data.guideline == "")?"N/A":data.guideline}
+
+  ## Test Procedure
+     ${(data.test == "")?"N/A":data.test}
+
+  ## Questions
+    if you have questions then please feel free to contact on these addresses,
+  Github: [${data.github}](https://github.com/${data.github})
+  
+  Email: [${data.email}](${data.email})
+    `;
 }
 
 module.exports = generateMarkdown;
