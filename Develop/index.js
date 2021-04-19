@@ -16,10 +16,15 @@ const questions = [
         message: "Enter Project Description"
     },
     {
+        type: "input",
+        name: "installation",
+        message: "Enter Installation Instruction"
+    },
+    {
         type: "list",
         name: "license",
         message: "Choose License",
-        choice: license
+        choices: license
     },
     {
         type: "input",
