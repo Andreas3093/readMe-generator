@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown");
+const generateMarkdown = require("./Develop/utils/generateMarkdown");
 const fs = require("fs");
 const license = ["MIT", "GPL", "APACHE"]
 // TODO: Create an array of questions for user input
